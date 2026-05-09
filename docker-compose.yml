@@ -1,0 +1,23 @@
+services:
+  nginx:
+    container_name: bsk_nginx
+    image: nginx:latest
+    env_file:
+      - ./.env
+    ports:
+      - ${BSK_NGINX_PORT_EXTERNAL}:${BSK_NGINX_PORT_INTERNAL}
+
+    environment:
+      BSK_NGINX_HOST: ${BSK_NGINX_HOST}
+      BSK_NGINX_PORT: ${BSK_NGINX_PORT_INTERNAL}
+      BSK_NGINX_API_URL: ${BSK_NGINX_API_URL}
+    volumes:
+      - ./nginx/default.conf.template:/etc/nginx/templates/default.conf.template
+      - ./src:/var/www/website
+    networks:
+      - bsk_shared_network
+
+networks:
+  bsk_shared_network:
+    external: true
+    name: ${BSK_NETWORK_NAME}

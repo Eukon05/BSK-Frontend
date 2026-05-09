@@ -1,0 +1,13 @@
+server {
+    server_name ${BSK_NGINX_HOST};
+    listen ${BSK_NGINX_PORT};
+
+    location / {
+        root /var/www/website;
+        index index.html index.htm;
+    }
+
+    location /predict {
+        proxy_pass ${BSK_NGINX_API_URL};
+    }
+}

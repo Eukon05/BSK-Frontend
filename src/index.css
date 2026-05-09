@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: lightcyan;
+}
+
+.appContainer {
+    max-width: fit-content;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgb(198 196 196);
+    background: #fff;
+    text-align: center;
+}
+
+.inputContainer,
+.resultsContainer {
+    display: flex;
+}
+
+.inputContainer {
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+#inputArea {
+    height: 200px;
+    padding: 10px;
+    resize: none;
+    overflow: auto;
+    box-sizing: border-box;
+    border: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: whitesmoke;
+}
+
+#loader {
+    display: none;
+    width: 48px;
+    height: 48px;
+    margin-top: 10px;
+    border: 5px solid gray;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.resultsContainer {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.inputContainer button {
+    font-size: 20px;
+    color: black;
+
+    min-height: 50px;
+    border: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #4cbce6;
+}
+
+.inputContainer button:hover {
+    background: #429fc1;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.promoContainer li {
+    list-style: none;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+li {
+    text-align: left;
+}
+
+#fragments {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#resultText.normal {
+    color: green;
+}
+
+#resultText.phishing {
+    color: red;
+}
+
+@media (max-width: 720px) {
+    .appContainer {
+        padding: 20px 16px;
+        margin: 6px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        margin-top: 0;
+    }
+
+    .promoContainer h3 {
+        font-size: 1.05rem;
+        line-height: 1.35;
+    }
+
+    .promoContainer p,
+    .promoContainer li {
+        font-size: 0.95rem;
+    }
+}

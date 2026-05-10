@@ -65,3 +65,10 @@ function submit() {
             loader.style.display = "none";
         })
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const submitButton = document.getElementById("submitButton");
+    if (submitButton) {
+        submitButton.addEventListener("click", submit);
+    }
+});

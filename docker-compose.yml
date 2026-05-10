@@ -13,7 +13,7 @@ services:
       BSK_NGINX_API_URL: ${BSK_NGINX_API_URL}
     volumes:
       - ./nginx/default.conf.template:/etc/nginx/templates/default.conf.template
-      - ./src:/var/www/website
+      - ./bsk_frontend/dist:/var/www/website
     networks:
       - bsk_shared_network
 

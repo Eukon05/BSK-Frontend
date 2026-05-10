@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <script src="./index.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <script type="module" src="/src/scripts/index.js"></script>
     <title>AI Phishing Detector</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <h1>AI Phishing Detector</h1>
         <div class="inputContainer">
             <textarea id="inputArea" placeholder="Paste your email contents here..."></textarea>
-            <button id="submitButton" onclick="submit()">Submit</button>
+            <button id="submitButton">Submit</button>
         </div>
         <div class="resultsContainer">
             <span id="loader"></span>

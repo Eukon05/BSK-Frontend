@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,105 @@
     <script type="module" src="/src/scripts/index.js"></script>
     <title>AI Phishing Detector</title>
 </head>
+
 <body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <h3>AI Phishing Detector</h3>
+        </div>
+        <div class="navbar-controls">
+            <a href="#home">Home</a>
+            <a href="#tool">Tool</a>
+            <a href="#how-to">How to Use</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
     <div class="appContainer">
-        <h1>AI Phishing Detector</h1>
-        <div class="inputContainer">
-            <textarea id="inputArea" placeholder="Paste your email contents here..."></textarea>
-            <button id="submitButton">Submit</button>
+        <div class="appSection" id="home">
+            <h1>AI Phishing Detector</h1>
+            <div class="promoContainer">
+                <h3>🎯 The best AI email scanning tool, completely free!</h3>
+                <p>Keep your inbox clean and secure with our advanced phishing detection powered by cutting-edge AI
+                    technology.</p>
+                <ul>
+                    <li>🤖 Utilizes the BERT LLM to detect even the slightest anomalies in your emails with incredible
+                        accuracy</li>
+                    <li>🔒 Secured by TLS encryption, your personal data won't get intercepted by anyone</li>
+                    <li>👻 No data persistence on our servers, nothing gets saved so you can stay completely anonymous
+                    </li>
+                    <li>⚡ Lightning-fast analysis - get results instantly as you check your email</li>
+                    <li>🛡️ Protect yourself from phishing scams, malware links, and social engineering attacks</li>
+                </ul>
+            </div>
         </div>
-        <div class="resultsContainer">
-            <span id="loader"></span>
-            <h3 id="resultText"></h3>
-            <span id="probability"></span>
+        <div class="appSection" id="tool">
+            <h2>Paste in your email for analysis</h2>
+            <div class="inputContainer">
+                <textarea id="inputArea" placeholder="Paste your email contents here..."></textarea>
+                <button id="submitButton">Submit</button>
+            </div>
+            <p><i>Remember to remove any sensitive information from the pasted text.<br>
+                Scan attachments with an AntiVirus solution for additional security.</i>    
+            </p>
+            <div class="resultsContainer">
+                <span id="loader"></span>
+                <h3 id="resultText"></h3>
+                <span id="probability"></span>
+            </div>
+            <div>
+                <ul id="fragments"></ul>
+            </div>
         </div>
-        <div>
-            <ul id="fragments"></ul>
+    </div>
+    <div class="appContainer">
+        <div class="appSection" id="how-to">
+            <h2>How to Use</h2>
+            <div class="promoContainer">
+                <ol>
+                    <li><strong>Copy</strong> the raw text from any suspicious email or message you have received.</li>
+                    <li><strong>Sanitize</strong> the text by double-checking that no personal information (passwords, bank details) remains inside it, just in case.</li>
+                    <li><strong>Paste</strong> the contents into the text field above in our analysis tool.</li>
+                    <li><strong>Submit</strong> and wait a few seconds. The AI will cross-reference language patterns and flag potential phishing markers.</li>
+                </ol>
+            </div>
         </div>
-
-        <hr>
-
-        <div class="promoContainer">
-            <h3>🎯 The best AI email scanning tool, completely free!</h3>
-            <p>Keep your inbox clean and secure with our advanced phishing detection powered by cutting-edge AI technology.</p>
-            <ul>
-                <li>🤖 Utilizes the BERT LLM to detect even the slightest anomalies in your emails with incredible accuracy</li>
-                <li>🔒 Secured by TLS encryption, your personal data won't get intercepted by anyone</li>
-                <li>👻 No data persistence on our servers, nothing gets saved so you can stay completely anonymous</li>
-                <li>⚡ Lightning-fast analysis - get results instantly as you check your email</li>
-                <li>🛡️ Protect yourself from phishing scams, malware links, and social engineering attacks</li>
-            </ul>
+    </div>
+    <div class="appContainer">
+        <div class="appSection" id="about">
+            <h2>About Us</h2>
+            <div class="promoContainer">
+                <p>Born from a vision to make the digital world safer, we are a dedicated team of cybersecurity researchers and data scientists. By leveraging the latest in Natural Language Processing (NLP) models, we aim to provide an accessible, robust barrier against the rampant spread of phishing and social engineering attacks on the web.</p>
+                <p>Our mission is simple: <strong>Zero Trust, Maximum Transparency.</strong> No one should have to compromise their privacy to gain security, which is why we process everything statelessly.</p>
+                <div class="team">
+                    <div class="teamMember">
+                        <a href="https://github.com/Cincior"><img src="https://avatars.githubusercontent.com/u/122095709?v=4&s=150" class="teamMemberImage"></a>
+                        <h3>Krzysztof Koszyk</h5>
+                    </div>
+                    <div class="teamMember">
+                        <a href="https://github.com/Dominik45578"><img src="https://avatars.githubusercontent.com/u/65173941?v=4&s=150" class="teamMemberImage"></a>
+                        <h3>Dominik Koralik</h5>
+                    </div>
+                    <div class="teamMember">
+                        <a href="https://github.com/Eukon05"><img src="https://avatars.githubusercontent.com/u/43497104?v=4&s=150" class="teamMemberImage"></a>
+                        <h3>Łukasz Konieczny</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="appContainer">
+        <div class="appSection" id="enterprise">
+            <h2>Enterprise-Grade Threat Intelligence</h2>
+            <div class="promoContainer">
+                <p>Empower your organization with highly scalable, AI-driven risk mitigation.<br>Our zero-trust framework synergizes flawlessly with next-generation neural networks to proactively neutralize advanced persistent threats before they impact your ecosystem.</p>
+                <ul>
+                    <li>🌐 <strong>Global Threat Telemetry:</strong> Seamlessly aggregated data streams from thousands of enterprise endpoints.</li>
+                    <li>⚙️ <strong>Frictionless Integration:</strong> Mission-critical deployment architectures designed for maximum scalability.</li>
+                    <li>🛡️ <strong>Compliance & Governance:</strong> Robust heuristics ensuring holistic adherence to global security paradigms.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
+
 </html>

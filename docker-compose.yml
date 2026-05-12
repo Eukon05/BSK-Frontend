@@ -17,7 +17,11 @@ services:
     networks:
       - bsk_shared_network
 
+  model:
+    container_name: bsk_model
+    image: cinkus/phishing-detector-api
+    networks:
+      - bsk_shared_network
+
 networks:
   bsk_shared_network:
-    external: true
-    name: ${BSK_NETWORK_NAME}

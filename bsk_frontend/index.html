@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.svg">
     <link rel="stylesheet" href="/src/styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="module" src="/src/scripts/index.js"></script>
-    <title>AI Phishing Detector</title>
+    <title>AI Phishing Detector | Enterprise Security</title>
 </head>
 
 <body>
     <div class="navbar">
         <div class="navbar-logo">
-            <h3>AI Phishing Detector</h3>
+            <h3><i class="fa-solid fa-shield-halved"></i> AI Phishing Detector</h3>
         </div>
         <div class="navbar-controls">
             <a href="#home">Home</a>
@@ -22,21 +23,17 @@
             <a href="#about">About</a>
         </div>
     </div>
-    <div class="appContainer">
-        <div class="appSection" id="home">
+    <div class="appContainer" id="home">
+        <div class="appSection">
             <h1>AI Phishing Detector</h1>
             <div class="promoContainer">
-                <h3>🎯 The best AI email scanning tool, completely free!</h3>
-                <p>Keep your inbox clean and secure with our advanced phishing detection powered by cutting-edge AI
-                    technology.</p>
+                <h3>🎯 An open-source AI email scanning tool</h3>
+                <p>Keep your inbox safe by detecting phishing and suspicious emails using our fine-tuned machine learning model.</p>
                 <ul>
-                    <li>🤖 Utilizes the BERT LLM to detect even the slightest anomalies in your emails with incredible
-                        accuracy</li>
-                    <li>🔒 Secured by TLS encryption, your personal data won't get intercepted by anyone</li>
-                    <li>👻 No data persistence on our servers, nothing gets saved so you can stay completely anonymous
-                    </li>
-                    <li>⚡ Lightning-fast analysis - get results instantly as you check your email</li>
-                    <li>🛡️ Protect yourself from phishing scams, malware links, and social engineering attacks</li>
+                    <li>🤖 <strong>DistilBERT Model:</strong> Utilizes a lightweight Transformer model fine-tuned on phishing datasets to classify text accurately.</li>
+                    <li>⚡ <strong>Lightning-fast analysis:</strong> Get results almost instantly without heavy processing delays.</li>
+                    <li>👻 <strong>Stateless Processing:</strong> No data persistence on our backend — your pasted text isn't saved, preserving your privacy.</li>
+                    <li>🛡️ <strong>Open Source:</strong> Completely transparent infrastructure with the frontend, API, and model available on GitHub.</li>
                 </ul>
             </div>
         </div>
@@ -46,7 +43,7 @@
                 <textarea id="inputArea" placeholder="Paste your email contents here..."></textarea>
                 <button id="submitButton">Submit</button>
             </div>
-            <p><i>Remember to remove any sensitive information from the pasted text.<br>
+            <p class="warningText"><i>Remember to remove any sensitive information from the pasted text.<br>
                 Scan attachments with an AntiVirus solution for additional security.</i>    
             </p>
             <div class="resultsContainer">
@@ -59,8 +56,8 @@
             </div>
         </div>
     </div>
-    <div class="appContainer">
-        <div class="appSection" id="how-to">
+    <div class="appContainer" id="how-to">
+        <div class="appSection">
             <h2>How to Use</h2>
             <div class="promoContainer">
                 <ol>
@@ -72,12 +69,12 @@
             </div>
         </div>
     </div>
-    <div class="appContainer">
-        <div class="appSection" id="about">
+    <div class="appContainer" id="about">
+        <div class="appSection">
             <h2>About Us</h2>
             <div class="promoContainer">
-                <p>Born from a vision to make the digital world safer, we are a dedicated team of cybersecurity researchers and data scientists. By leveraging the latest in Natural Language Processing (NLP) models, we aim to provide an accessible, robust barrier against the rampant spread of phishing and social engineering attacks on the web.</p>
-                <p>Our mission is simple: <strong>Zero Trust, Maximum Transparency.</strong> No one should have to compromise their privacy to gain security, which is why we process everything statelessly.</p>
+                <p>This project was created to demonstrate the application of Natural Language Processing (NLP) models in identifying phishing and social engineering attacks.</p>
+                <p>The system consists of a fine-tuned DistilBERT model, a backend API, and this frontend application. All components are open-source and available on GitHub.</p>
                 <div class="team">
                     <div class="teamMember">
                         <a href="https://github.com/Cincior"><img src="https://avatars.githubusercontent.com/u/122095709?v=4&s=150" class="teamMemberImage"></a>
@@ -95,19 +92,24 @@
             </div>
         </div>
     </div>
-    <div class="appContainer">
-        <div class="appSection" id="enterprise">
-            <h2>Enterprise-Grade Threat Intelligence</h2>
-            <div class="promoContainer">
-                <p>Empower your organization with highly scalable, AI-driven risk mitigation.<br>Our zero-trust framework synergizes flawlessly with next-generation neural networks to proactively neutralize advanced persistent threats before they impact your ecosystem.</p>
-                <ul>
-                    <li>🌐 <strong>Global Threat Telemetry:</strong> Seamlessly aggregated data streams from thousands of enterprise endpoints.</li>
-                    <li>⚙️ <strong>Frictionless Integration:</strong> Mission-critical deployment architectures designed for maximum scalability.</li>
-                    <li>🛡️ <strong>Compliance & Governance:</strong> Robust heuristics ensuring holistic adherence to global security paradigms.</li>
-                </ul>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4><i class="fa-solid fa-code-branch"></i> Open Source Repositories</h4>
+                <a href="https://github.com/Cincior/PhishingDetector" target="_blank"><i class="fa-brands fa-github"></i> Core Backend API</a>
+                <a href="https://github.com/Cincior/DistilBERT-Finetuning-for-phishing-detection" target="_blank"><i class="fa-brands fa-github"></i> DistilBERT ML Model</a>
+                <a href="https://github.com/Eukon05/BSK-Frontend" target="_blank"><i class="fa-brands fa-github"></i> Frontend App</a>
+            </div>
+            <div class="footer-info">
+                <h4><i class="fa-solid fa-shield-halved"></i> AI Phishing Detector</h4>
+                <p>An open-source tool utilizing DistilBERT to classify and detect phishing emails.</p>
             </div>
         </div>
-    </div>
+        <div class="footer-bottom">
+            &copy; 2026 AI Phishing Detector. All rights reserved.
+        </div>
+    </footer>
 </body>
 
 </html>

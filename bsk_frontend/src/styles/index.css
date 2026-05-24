@@ -183,8 +183,28 @@ li {
 }
 
 #fragments {
-    width: fit-content;
-    margin: 0 auto;
+    width: 100%;
+    margin: 20px 0 0 0;
+    gap: 15px;
+}
+
+#fragments li {
+    list-style-type: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    border: 1px solid #dce4ec;
+    border-left: 5px solid #2980b9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    color: #2c3e50;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#fragments li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 #resultText.normal {

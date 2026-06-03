@@ -10,9 +10,9 @@ function submit() {
     prob.textContent = "";
     fragm.innerHTML = "";
 
-    if (!input) {
+    if (!input || input.trim().length < 10) {
         resultText.className = "phishing";
-        resultText.textContent = "The input cannot be empty";
+        resultText.textContent = "Input must be at least 10 characters long";
         loader.style.display = "none";
         return;
     }

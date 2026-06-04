@@ -237,6 +237,115 @@ li {
     border-radius: 50%;
 }
 
+/* ── Input mode toggle ── */
+.inputToggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.toggleBtn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    background: #f4f6f9;
+    color: #7f8c8d;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.toggleBtn:first-child {
+    border-right: 1px solid #dcdde1;
+}
+
+.toggleBtn.active {
+    background: #2980b9;
+    color: #ffffff;
+}
+
+.toggleBtn:not(.active):hover {
+    background: #e4eaf0;
+    color: #2c3e50;
+}
+
+/* ── File drop zone ── */
+.fileDropZone {
+    height: 220px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #f9fbfd;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #aab7c4;
+    border-bottom: 1px solid #dcdde1;
+    transition: background 0.2s ease;
+}
+
+.fileDropZone i.upload-icon {
+    color: #aab7c4 !important;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.fileDropZone p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aab7c4;
+}
+
+/* Hide the native input, show a styled label instead */
+#fileToPredict {
+    display: none;
+}
+
+.filePickerBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    background: #ffffff;
+    color: #2980b9;
+    border: 1.5px solid #2980b9;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(41, 128, 185, 0.12);
+}
+
+.filePickerBtn:hover {
+    background: #2980b9;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(41, 128, 185, 0.25);
+}
+
+.filePickerBtn:hover ~ .upload-icon,
+.filePickerBtn:hover + .upload-icon {
+    color: #2980b9 !important;
+}
+
+.fileNameLabel {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
 @media (max-width: 720px) {
     .navbar {
         flex-direction: column;
@@ -287,7 +396,7 @@ li {
     }
 
     .footer-content {
-        display: block; /* Turns off flex to avoid flex-basis height issues */
+        display: block;
         text-align: center;
         margin-bottom: 10px;
     }
@@ -377,4 +486,13 @@ li {
     border-top: 1px solid #34495e;
     color: #7f8c8d;
     font-size: 0.85rem;
+}
+
+/* ── Loader text ── */
+#loaderText {
+    display: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2980b9;
+    letter-spacing: 0.02em;
 }

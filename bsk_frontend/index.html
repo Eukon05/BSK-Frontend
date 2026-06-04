@@ -39,8 +39,29 @@
         </div>
         <div class="appSection" id="tool">
             <h2>Paste in your email for analysis</h2>
+
+            <div class="inputToggle">
+                <button class="toggleBtn active" id="btnText">
+                    <i class="fa-solid fa-align-left"></i> Text
+                </button>
+                <button class="toggleBtn" id="btnFile">
+                    <i class="fa-solid fa-file-arrow-up"></i> File
+                </button>
+            </div>
+
             <div class="inputContainer">
                 <textarea id="inputArea" placeholder="Paste your email contents here..."></textarea>
+
+                <div id="fileArea" class="fileDropZone" style="display:none;">
+                    <i class="fa-solid fa-file-arrow-up fa-2x upload-icon"></i>
+                    <p>Select a <strong>.txt</strong> file to analyse</p>
+                    <label class="filePickerBtn" for="fileToPredict">
+                        <i class="fa-solid fa-folder-open"></i> Choose file
+                    </label>
+                    <input type="file" id="fileToPredict" name="value" accept=".txt,.docx" />
+                    <span class="fileNameLabel" id="fileNameLabel">No file chosen</span>
+                </div>
+
                 <button id="submitButton">Submit</button>
             </div>
             <p class="warningText"><i>Remember to remove any sensitive information from the pasted text.<br>
@@ -48,6 +69,7 @@
             </p>
             <div class="resultsContainer">
                 <span id="loader"></span>
+                <span id="loaderText">Thinking...</span>
                 <h3 id="resultText"></h3>
                 <span id="probability"></span>
             </div>

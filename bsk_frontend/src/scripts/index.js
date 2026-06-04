@@ -70,7 +70,7 @@ function submit() {
         };
     }
 
-    fetch("http://127.0.0.1:5000/predict", fetchArgs)
+    fetch("/predict", fetchArgs)
         .then(response => {
             if (!response.ok) throw new Error(`Request failed with status ${response.status}`);
             return response.json();
